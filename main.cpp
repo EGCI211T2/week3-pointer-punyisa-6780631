@@ -1,13 +1,11 @@
 #include <iostream>
 #include <iomanip>
-#define SIZE 10
 
 using namespace std;
 
 int main(int argc,char *argv[]){
   int *pa, *pb, i, temp;
-//int a[SIZE] ={1,2,3,4,5,6,7,8,9,10}; 
-int n;
+  int n;
   cout<<"How many numbers? ";
   cin>>n;
 pa = new int[n]; //new pointer with array size of n
@@ -39,7 +37,7 @@ for (i=0; i<n-1; i++ ,pa++){
   //cout<<pa<<endl;
 }
 cout<<setw(3)<<*pa<<endl;
-
-delete[]pa;
+pa-=(n-1);
+delete []pa;
 return 0;
 }
