@@ -5,14 +5,14 @@ using namespace std;
 
 int main(int argc,char *argv[]){
   int *pa, *pb, i, temp;
-  int n;
-  cout<<"How many numbers? ";
-  cin>>n;
-pa = new int[n]; //new pointer with array size of n
-for(i=0;i<n;i++){
-  cin>>*pa;
-  pa++;
+  int n= argc-1;
+  pa = new int[n]; //new pointer with array size of n
+  for(i=0;i<n;i++,pa++){
+    *pa=atoi(argv[i+1]);
+  //cin>>*pa; //if we aff pa++; after it go to the last array it will add another array
 }
+  /*cout<<"How many numbers? ";
+  cin>>n;*/
 pa-=n; //reset it to be @ the beginning
 cout<<"Original: ";
 for (i=0; i<n-1; i++ ,pa++){
@@ -33,7 +33,7 @@ for (i=0; i<n/2; i++)
 pa-=n/2;
 cout<<"Reversed: ";
 for (i=0; i<n-1; i++ ,pa++){
-   cout<<setw(3)<<*pa ;//<<endl;
+   cout<<setw(3)<<*pa;//<<endl;
   //cout<<pa<<endl;
 }
 cout<<setw(3)<<*pa<<endl;
