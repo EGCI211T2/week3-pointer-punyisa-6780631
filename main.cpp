@@ -8,7 +8,7 @@ int main(int argc,char *argv[]){
   int n= argc-1;
   pa = new int[n]; //new pointer with array size of n
   for(i=0;i<n;i++,pa++){
-    *pa=atoi(argv[i+1]);
+    *pa=atoi(argv[i+1]); //to change it int
   //cin>>*pa; //if we aff pa++; after it go to the last array it will add another array
 }
   /*cout<<"How many numbers? ";
